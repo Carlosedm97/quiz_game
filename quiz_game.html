@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="quiz_game.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
+      <title>Quiz Game</title>
+  </head>
+  <body>
+    <header>
+      <h1>Quiz Game</h1>
+      <p>Juego de Capitales</p>
+    </header>
+    <main>
+      <div class="container">
+        <section id="p1">
+          <legend>1 - ¿Cuál es la capital de Italia?</legend>
+            <label for="radio-turin"><input type="radio" value="turin" id="radio-turin" name="q1" onclick="guardarRespuestas(0, this)">Turín</label>
+            <label for="radio-napoles"><input type="radio" value="napoles" id="radio-napoles" name="q1" onclick="guardarRespuestas(0, this)">Nápoles</label>
+            <label for="radio-roma"><input type="radio" value="roma" id="radio-roma" name="q1" onclick="guardarRespuestas(0, this)">Roma</label>
+        </section>
+        <section id="p2">
+          <legend>2 - ¿Cuál es la capital de Noruega?</legend>
+            <label for="radio-oslo"><input type="radio" value="oslo" id="radio-oslo" name="q2" onclick="guardarRespuestas(1, this)">Oslo</label>
+            <label for="radio-bucarest"><input type="radio" value="bucarest" id="radio-bucarest" name="q2" onclick="guardarRespuestas(1,this)">Bucarest</label>
+            <label for="radio-madrid"><input type="radio" value="madrid" id="radio-madrid" name="q2" onclick="guardarRespuestas(1, this)">Madrid</label>
+        </section>
+        <section id="p3">
+          <legend>3 - ¿Cuál es la capital de Perú?</legend>
+            <label for="radio-la-paz"><input type="radio" value="la paz" id="radio-la-paz" name="q3" onclick="guardarRespuestas(2, this)">La Paz</label>
+            <label for="radio-ciudad-del-peru"><input type="radio" value="ciudad del peru" id="radio-ciudad-del-peru" name="q3" onclick="guardarRespuestas(2, this)">Ciudad del Perú</label>
+            <label for="radio-lima"><input type="radio" value="lima" id="radio-lima" name="q3" onclick="guardarRespuestas(2, this)">Lima</label>
+        </section>
+      </div>
+      <button onclick="validarRespuestas()">Corregir</button>
+      <h2>Cantidad de preguntas acertadas: <span id="resultado"></span></h2>
+    </main>
+    <script src="quiz_game.js"></script>
+  </body>
+</html>
